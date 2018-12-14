@@ -40,4 +40,4 @@ The mode is implemented in model.py.
 
 # Rewards
 
-![alt text](https://github.com/tiantian20007/DRLND-Navigation/blob/master/res/result.png "Result")
+![alt text](https://github.com/tiantian20007/DRLND-ContinuousControl/blob/master/res/result.png "Result")
