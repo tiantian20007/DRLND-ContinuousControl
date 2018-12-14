@@ -1,10 +1,11 @@
 # DRLND-ContinuousControl
-Navigation project for Deep Reinforcement Learning Nanodegree Program
+Continuous Control project for Deep Reinforcement Learning Nanodegree Program
 
 # Environment
 For this project, we will work with the Reacher environment provided by Udacity.
 
 ![alt text][env]
+
 [env]: https://github.com/tiantian20007/DRLND-ContinuousControl/blob/master/res/env "Reacher"
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
