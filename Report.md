@@ -16,11 +16,15 @@ In Q-Learning, we update a guess with a guess, and this can potentially lead to 
 
 where w<sup>-</sup> are the weights of a separate target network that are not changed during the learning step, and (_S_, _A_, _R_, _S'_) is an experience tuple.
  
+We use the same method for the Actor network updating.
 
 ## Model architectures
 The actor DNN contains 2 hidden layers, the first has 200 neuron units and the second has 150. Actor DNN Ouputs the actions. 
+
 The critic DNN contains also contains 2 hidden layers, the first has 200 neuron units and the second has 150. 
+
 The actions calculated by the Actor DNN will be concatenated to the first critic hidden layer's output, and to be the input of the second critic hidden layer. 
+
 We choose relu as the activate function.
 The mode is implemented in model.py. 
 
@@ -41,3 +45,19 @@ The mode is implemented in model.py.
 # Rewards
 
 ![alt text](https://github.com/tiantian20007/DRLND-ContinuousControl/blob/master/res/result.png "Result")
+
+# Future Work
+
+[Distributed Distributional Deep Deterministic Policy Gradient algorithm, D4PG](https://openreview.net/forum?id=SyZipzbCb)
+
+This algorithm are implemented as a neural network layer mapping the output of the
+critic torso (see Figure 1) to the parameters of a given distribution
+
+![alt text](https://github.com/tiantian20007/DRLND-ContinuousControl/blob/master/res/d4pg.png "d4pg")
+
+A modification to the DDPG update which utilizes N-step returns when estimating the TD error. This can be seen as replacing the Bellman operator with an N-step variant
+
+![alt text](https://github.com/tiantian20007/DRLND-ContinuousControl/blob/master/res/N-stepTD.png "N-stepTD")
+
+
+
